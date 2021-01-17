@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="3sz-cN-uXp">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="zCN-1V-Lz4" customClass="ViewController" customModule="animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uCO-K1-6XG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_0_delay-0.1s.gif" translatesAutoresizingMaskIntoConstraints="NO" id="7dC-o2-mph">
+                                <rect key="frame" x="20" y="277" width="374" height="342"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="KfA-Fd-qeD">
+                                <rect key="frame" x="10" y="639" width="394" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avy-x9-8lL">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                        <state key="normal" title="fadeIn"/>
+                                        <connections>
+                                            <action selector="fadeIn:" destination="zCN-1V-Lz4" eventType="touchUpInside" id="YKL-if-utn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkT-TQ-ce8">
+                                        <rect key="frame" x="149" y="0.0" width="96" height="30"/>
+                                        <state key="normal" title="slideIn"/>
+                                        <connections>
+                                            <action selector="slideIn:" destination="zCN-1V-Lz4" eventType="touchUpInside" id="Upg-VA-9jg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCJ-lK-GmV">
+                                        <rect key="frame" x="298" y="0.0" width="96" height="30"/>
+                                        <state key="normal" title="grow"/>
+                                        <connections>
+                                            <action selector="grow:" destination="zCN-1V-Lz4" eventType="touchUpInside" id="J36-nh-Z86"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IN-g1-mGm">
+                                <rect key="frame" x="192" y="222" width="30" height="30"/>
+                                <state key="normal" title="play"/>
+                                <connections>
+                                    <action selector="play:" destination="zCN-1V-Lz4" eventType="touchUpInside" id="IPX-ZG-18E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PQ0-Ov-20h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KfA-Fd-qeD" firstAttribute="top" secondItem="7dC-o2-mph" secondAttribute="bottom" constant="20" id="397-d9-cxw"/>
+                            <constraint firstItem="1IN-g1-mGm" firstAttribute="centerX" secondItem="uCO-K1-6XG" secondAttribute="centerX" id="9Ok-xa-pcj"/>
+                            <constraint firstItem="7dC-o2-mph" firstAttribute="centerY" secondItem="uCO-K1-6XG" secondAttribute="centerY" id="BfN-lW-Kao"/>
+                            <constraint firstItem="7dC-o2-mph" firstAttribute="leading" secondItem="uCO-K1-6XG" secondAttribute="leadingMargin" id="Gv7-rp-r1e"/>
+                            <constraint firstItem="PQ0-Ov-20h" firstAttribute="trailing" secondItem="KfA-Fd-qeD" secondAttribute="trailing" constant="10" id="Wm4-ep-O5c"/>
+                            <constraint firstItem="KfA-Fd-qeD" firstAttribute="leading" secondItem="PQ0-Ov-20h" secondAttribute="leading" constant="10" id="eHg-kE-MDg"/>
+                            <constraint firstItem="7dC-o2-mph" firstAttribute="top" secondItem="1IN-g1-mGm" secondAttribute="bottom" constant="25" id="fm6-uo-5mA"/>
+                            <constraint firstItem="7dC-o2-mph" firstAttribute="top" secondItem="PQ0-Ov-20h" secondAttribute="top" constant="233" id="hyG-QA-uky"/>
+                            <constraint firstItem="7dC-o2-mph" firstAttribute="centerX" secondItem="uCO-K1-6XG" secondAttribute="centerX" id="mDo-4T-ZB8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="7dC-o2-mph" id="1LN-qB-cKJ"/>
+                        <outlet property="playBtn" destination="1IN-g1-mGm" id="aOG-QX-hA8"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjo-fd-ogs" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="161" y="128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="frame_0_delay-0.1s.gif" width="374" height="277"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
