@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zCN-1V-Lz4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="3sz-cN-uXp">
             <objects>
-                <viewController id="zCN-1V-Lz4" customClass="ViewController" customModule="animation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zCN-1V-Lz4" customClass="ViewController" customModule="Animation_template" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uCO-K1-6XG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,21 +26,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
                                         <state key="normal" title="fadeIn"/>
                                         <connections>
-                                            <action selector="fadeIn:" destination="zCN-1V-Lz4" eventType="touchUpInside" id="YKL-if-utn"/>
+                                            <action selector="clickFadeIn" destination="zCN-1V-Lz4" eventType="touchUpInside" id="yZW-KF-fBe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkT-TQ-ce8">
                                         <rect key="frame" x="149" y="0.0" width="96" height="30"/>
                                         <state key="normal" title="slideIn"/>
                                         <connections>
-                                            <action selector="slideIn:" destination="zCN-1V-Lz4" eventType="touchUpInside" id="Upg-VA-9jg"/>
+                                            <action selector="clickSlideIn" destination="zCN-1V-Lz4" eventType="touchUpInside" id="puJ-rj-VzU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCJ-lK-GmV">
                                         <rect key="frame" x="298" y="0.0" width="96" height="30"/>
                                         <state key="normal" title="grow"/>
                                         <connections>
-                                            <action selector="grow:" destination="zCN-1V-Lz4" eventType="touchUpInside" id="J36-nh-Z86"/>
+                                            <action selector="clickGrow" destination="zCN-1V-Lz4" eventType="touchUpInside" id="9VO-Gz-ab2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -49,7 +49,7 @@
                                 <rect key="frame" x="192" y="222" width="30" height="30"/>
                                 <state key="normal" title="play"/>
                                 <connections>
-                                    <action selector="play:" destination="zCN-1V-Lz4" eventType="touchUpInside" id="IPX-ZG-18E"/>
+                                    <action selector="clickPlay:" destination="zCN-1V-Lz4" eventType="touchUpInside" id="z1h-7W-3f7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,8 +68,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="7dC-o2-mph" id="1LN-qB-cKJ"/>
-                        <outlet property="playBtn" destination="1IN-g1-mGm" id="aOG-QX-hA8"/>
+                        <outlet property="btnPlay" destination="1IN-g1-mGm" id="6fB-Fd-F9u"/>
+                        <outlet property="img" destination="7dC-o2-mph" id="Lc5-cU-U3M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjo-fd-ogs" sceneMemberID="firstResponder"/>
